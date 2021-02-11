@@ -1,0 +1,32 @@
+### Ausgangssituation
+
+Täglich planen Fotografen Fotoshootings mit Models und Locations.
+
+### Ist-Situation
+
+Wie bei vielen Dingen ist die Planung bei einem Fotoshooting das Wichtigste.
+Man benötigt Fotografen, Models und Locations.
+
+### Problem
+
+Heutzutage gibt es zwar viele Fotografen und Models, jedoch sind diese schwer zu finden und
+
+Heutzutage gibt es eine gewisse Übersättigung im Bereich der diesem Bereich. Durch diese Übersättigung entsteht das Problem, dass es immens schwer ist
+hervorzustehen und gefunden zu werden bzw. ein Netzwerk aufzubauen. Auch Kunden tun sich schwer bei der Suche nach einem Fotografen bzw. einem Model und gehen
+dann größtenteils zu alteingesessenen Fotografen bzw. Modelagenturen.
+
+
+### Aufgabenstellung
+
+Es ist eine Plattform zu erstellen, auf jener
+
+
+Die montierte Kamera wird einen vorgegeben Streckenabschnitt in einer ebenso vorgegebenen Zeit zurücklegen. Somit können z.B. auch Zeitrafferaufnahmen
+erstellt werden. Der Motor des Sliders wird über einen Micro-Controller angesprochen werden. Später wird das System mit einer App gesteuert werden können.
+Außerdem ist eine Anleitung zu erstellen, damit Leute das Slider-System nachbauen können.
+
+### Ziele
+
+Fotografen und Models soll es ermöglicht werden auf der Plattform gemeinsam
+Fotoshootings zu planen, sich mit Gleichgesinnten auszutauschen und ein paar
+Hilfestellungen zu genießen.
