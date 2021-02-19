@@ -1,0 +1,31 @@
+@startuml
+
+skinparam ArrowColor black
+skinparam handwritten true
+skinparam borderColor black
+skinparam backgroundColor transparent
+skinparam nodeShadowing false
+skinparam nodeBackgroundColor transparent
+skinparam artifactShadowing false
+skinparam artifactBackgroundColor transparent
+skinparam componentShadowing false
+skinparam componentBackgroundColor transparent
+skinparam componentBorderColor black
+
+node Client {
+ component Angular
+}
+
+node Server {
+ component Quarkus
+}
+
+node Database {
+ component PostgreSQL
+}
+
+
+Client == Server : <<JSON>>
+Server == Database : <<ORM>>
+
+@enduml

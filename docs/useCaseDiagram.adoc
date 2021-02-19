@@ -1,0 +1,30 @@
+@startuml
+
+skinparam ArrowColor black
+skinparam handwritten true
+skinparam borderColor black
+skinparam backgroundColor transparent
+skinparam ArrowColor black
+skinparam ActorBorderColor black
+skinparam ActorBackgroundColor transparent
+
+skinparam usecase {
+	BackgroundColor transparent
+	BorderColor black
+}
+
+left to right direction
+skinparam packageStyle rectangle
+actor Fotograf
+actor Model
+rectangle PhotoLoco {
+  Fotograf -- (Photoshooting planen)
+  Fotograf -- (Location finden)
+  Fotograf -- (Model finden)
+  Model -- (Fotograf finden)
+  Fotograf -- (Lokale Fotografie-Zeiten herausfinden)
+  Fotograf -- (Beitrag verfassen)
+  Model -- (Beitrag verfassen)
+}
+@enduml
+
