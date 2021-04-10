@@ -97,8 +97,69 @@ image:./images/EntityUML.png[Entities,title="Entities"]
 * UI Design F
 * Datenstruktur F
 
+== Technologien
 
-==== Git
+=== Technologie-Analyse
+
+==== Quarkus
+
+=== Angular
+Für das Frontend der Applikation wird das Webapplikationsframework Angular verwendet. Es ist eine Plattform, die für die Entwicklung von Client Applikationen mittels Web-Technologien HTML, TypeScript und CSS.
+
+Angular umfasst:
+
+* Module
+* Komponenten
+* Templates
+* Data Bindings
+* Services
+
+Mithilfe von Module können Funktionalitäten ausgelagert werden. Dies führt zu einem leichtgewichtigeren und performanteren Code. Die Webapplikation wird in Angular mittels Komponenten aufgebaut.
+Jede Komponente besteht normalerweise aus:
+
+* einer TypeScript-Datei, in welcher die View-Logik beschrieben ist.
+* einer View, welche in HTML umgesetzt ist.
+* einem Stylesheet, welches in CSS geschrieben ist.
+
+Die Business-Logik der Applikation wird in Services ausgelagert. Diese lassen sich dann mittels Dependency Injection in Komponenten eingebinden.
+
+Das Aufteilen der Applikation in Komponenten erleichtert das Testen deutlich, da die Komponenten im Normalfall unabhängig voneinander sind.
+
+==== Alternativen
+Alternative Frameworks zu Angular sind Vue und React. Beide Frameworks sind leichtgewichtiger und leichter zum Verwenden, da die Frameworks im Vergleich zu Angular JavaScript anstatt TypeScript verwenden. Jedoch wurde entschlossen Angular zu verwenden, weil durch die Verwendung von TypeScript auch die Features der Programmiersprache für die Entwicklung zur Verfügung stehen.
+
+Features von denen Nutzen gemacht wurde, sind zum Beispiel anonyme Funktionen:
+
+[source, typescript]
+----
+this.route.params.subscribe(
+      (params: Params) => {
+        this.userService.getUserByInstagramName(params.instagramName).subscribe(value => {
+          this.user = value;
+        });
+      }
+    );
+----
+
+Wie auch For-Of-Schleifen:
+
+[source, html]
+----
+<div *ngFor="let comment of getPostCommentsById()" class="col-6 z-de" id="comments">
+    <div>
+        <b>{{comment.author.username}}</b>
+        <p>{{comment.content}}</p>
+    </div>
+</div>
+----
+
+=== Leaflet
+Eine bedeutende Funktion dieser Arbeit ist das Teilen und Finden von Foto-Locations. Für eine übersichtliche Darstellung wird die opensource Javascript-Library Leaflet verwendet. Leaflet ermöglicht es dynamische Onlinekarten zu erstellen. Damit ist für den Nutzer eine klare Übersicht, über alle Location auf einer interaktiven Karte gegeben. Im Vergleich zu Alternativen zur Darstellung von Karten wie OpenLayers oder Google Maps ist Leaflet eine leichtgewichtige JavaScript-Bibliothek ist, die aber Features unterstützt, die für dieses Projekt gebraucht werden.
+
+
+== Projektmanagement
+
+=== Git
 Beim Programmieren können folgende Anforderungen vorkommen:
 
 **** Die Codebasis muss regelmäßig gesichert werden.
@@ -110,16 +171,16 @@ Beim Programmieren können folgende Anforderungen vorkommen:
 
 Um diese Anforderungen zu erfüllen, wird das verteilte Versionierungssystem Git verwendet.
 
-===== Funktionsweise
+==== Funktionsweise
 
 Zentrale Versionierungssysteme verwenden ein einziges Repository zur Versionierung. Ein Repository ist ein Projektarchiv, in welches Arbeitsfortschritte dokumentiert werden können.
 
-Git verwendet ein Local Repository und ein Remote Repository. Versionierungssysteme, die so ein Konzept verfolgen, nennt man verteilte oder auch dezentrale Versionierungssystem, da man kein zentrales Repository verwendet. Jede Person hat ein eigenes Local Repository auf seinem Rechner in dem er seine Arbeitsfortschritte dokumentiert. Auf einem Remote Repository werden dann die Arbeitsfortschritte verschiedenster Local Repositories zusammengefasst und vereint. Vorteil davon ist, dass es keine Konflikte gibt, wenn mehrere Entwickler an derselben Version arbeiten, da jeder sein eigenes Local Repository hat.
+Git verwendet ein Local Repository und ein Remote Repository. Versionierungssysteme, die so ein Konzept verfolgen, nennt man verteilte oder auch dezentrale Versionierungssystem, da kein zentrales Repository verwendet wird. Jede Person hat ein eigenes Local Repository auf seinem Rechner in dem er seine Arbeitsfortschritte dokumentiert. Auf einem Remote Repository werden dann die Arbeitsfortschritte verschiedenster Local Repositories zusammengefasst und vereint. Vorteil davon ist, dass es keine Konflikte gibt, wenn mehrere Entwickler an derselben Version arbeiten, da jeder sein eigenes Local Repository hat.
 
-Remote Repositories für Git werden von verschiedensten Providern, wie zum Beispiel Github, Bitbucket oder Gitlab zu Verfügung gestellt. Für dieses Projekt fiel die Wahl auf Github, da Github sehr benutzerfreundlich ist. Es ist kostenlos und es steht große aktive Community dahinter, daher ist es leicht Lösungen zu Problemen zu finden.
+Remote Repositories für Git werden von verschiedensten Providern, wie zum Beispiel Github, Bitbucket oder Gitlab zu Verfügung gestellt. Für dieses Projekt fiel die Wahl auf Github.
 
 
-===== Git-Workflow
+==== Git-Workflow
 
 Der Aufbau von Git besteht aus einem Working Directory, einer Staging Area, einem Lokalen Repository und einem Remote Repository.
 
