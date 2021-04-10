@@ -96,3 +96,42 @@ image:./images/EntityUML.png[Entities,title="Entities"]
 ** filter
 * UI Design F
 * Datenstruktur F
+
+
+==== Git
+Beim Programmieren können folgende Anforderungen vorkommen:
+
+**** Die Codebasis muss regelmäßig gesichert werden.
+**** Protokollierungen von Änderungen.
+**** Der Entwickler möchte Zugriff auf ältere Versionen seines Programms haben.
+**** Beim Entwickeln eines Softwareprodukts im Team braucht jedes Teammitglied Zugriff auf den Sourcecode.
+**** Teammitglieder arbeiten oft gleichzeitig an denselben Sourcecode-Files. Sämtliche Änderungen müssen in die Codebasis eingepflegt werden.
+**** Separates Entwickeln von neuen Features, bis diese fehlerfrei sind und anschließendes Einfügen dieser neuen Funktionen in die Codebasis.
+
+Um diese Anforderungen zu erfüllen, wird das verteilte Versionierungssystem Git verwendet.
+
+===== Funktionsweise
+
+Zentrale Versionierungssysteme verwenden ein einziges Repository zur Versionierung. Ein Repository ist ein Projektarchiv, in welches Arbeitsfortschritte dokumentiert werden können.
+
+Git verwendet ein Local Repository und ein Remote Repository. Versionierungssysteme, die so ein Konzept verfolgen, nennt man verteilte oder auch dezentrale Versionierungssystem, da man kein zentrales Repository verwendet. Jede Person hat ein eigenes Local Repository auf seinem Rechner in dem er seine Arbeitsfortschritte dokumentiert. Auf einem Remote Repository werden dann die Arbeitsfortschritte verschiedenster Local Repositories zusammengefasst und vereint. Vorteil davon ist, dass es keine Konflikte gibt, wenn mehrere Entwickler an derselben Version arbeiten, da jeder sein eigenes Local Repository hat.
+
+Remote Repositories für Git werden von verschiedensten Providern, wie zum Beispiel Github, Bitbucket oder Gitlab zu Verfügung gestellt. Für dieses Projekt fiel die Wahl auf Github, da Github sehr benutzerfreundlich ist. Es ist kostenlos und es steht große aktive Community dahinter, daher ist es leicht Lösungen zu Problemen zu finden.
+
+
+===== Git-Workflow
+
+Der Aufbau von Git besteht aus einem Working Directory, einer Staging Area, einem Lokalen Repository und einem Remote Repository.
+
+image:./images/gitWorkflow.png[title="GitWorkflow"]
+
+Das Working Directory ist das Arbeitsverzeichnis, in welches sich die Dateien des Softwareprodukts befinden und die Teammitglieder entwickeln.
+
+Die Staging Area ist eine Kopie des Arbeitsverzeichnisses. Mittels `git add` kann entschieden werden, welche Dateien in diese Kopie übertragen werden.
+
+Um Arbeitsfortschritte von der Staging Area in das Local Repository zu übertragen und zu dokumentieren, müssen sogenannte Commits erstellt werden. Ein Commit ist eine Momentaufnahme von Dateien und Verzeichnissen zu einem bestimmten Zeitpunkt. Bei jedem Commit wird eine Notiz hinzugefügt, in der kurz beschrieben wird, was für Änderungen vorgenommen wurden. Einen Commit erstellt man wie folgt:
+```
+git commit -m "Notiz"
+```
+
+Lokale Änderungen werden dann mittels `git push` auf das Remote Repository übertragen.

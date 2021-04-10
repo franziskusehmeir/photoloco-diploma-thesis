@@ -1,0 +1,19 @@
+@startuml
+
+folder workingDirectory [
+working directory
+]
+
+storage stagingArea as "Staging Area"
+
+rectangle localRepo as "Local Repository"
+
+rectangle remoteRepo as "Remote Repository"
+
+workingDirectory -r-> stagingArea : add
+
+stagingArea -r-> localRepo : commit
+
+localRepo -r-> remoteRepo : push
+
+@enduml
