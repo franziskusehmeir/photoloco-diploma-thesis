@@ -8,18 +8,32 @@
 * Einleitung
 * Technologie
 ** Technologie-Analyse
+*** Quarkus L
+**** Dependencies
+***** quarkus-resteasy
+***** quarkus-junit5
+***** rest-assured
+***** quarkus-resteasy-jsonb
+***** quarkus-elytron-security-jdbc
+***** quarkus-hibernate-orm-panache
+***** quarkus-jdbc-postgresql
+***** quarkus-elytron-security-properties-file
+***** quarkus-hibernate-validator
+** Angular L
+** Docker F
+** Leaflet L
+** Times API F
+** Geolocation API F
 ** Technische Sprachen
-*** Java
-*** TypeScript
-*** HTML
-*** CSS
-*** JPQL
+*** Java L
+*** TypeScript L
+*** HTML F
+*** CSS F
+*** SQL F
 ** Werkzeuge
-*** InteliJ IDEA
-*** WebStorm
+*** InteliJ IDEA L
 * Projektmanagement
-** Pflichtenheft
-
+** Pflichtenheft F
 ** Meilensteinliste
 ** Git
 * Probleme (technisch)
@@ -34,7 +48,7 @@
 ** Auflistung der Fotografen/Models/Locations
 ** *etc*
 * Database
-** PostgreSQL
+** PostgreSQL F
 * Schlussfolgerung
 * Literaturverzeichnis/Referenzen
 * Anhang
@@ -74,26 +88,11 @@ image:./images/EntityUML.png[Entities,title="Entities"]
 #### Andere Themen
 
 * Näher auf ausgewählte Aspekte eingehen (Ein thema in Verbindung mit der DA auswählen)
-* Verwendete Technologien auflisten & beschreiben
-** Java
-** TS
-** Quarkus
-*** Dependencies
-**** quarkus-resteasy
-**** quarkus-junit5
-**** rest-assured
-**** quarkus-resteasy-jsonb
-**** quarkus-elytron-security-jdbc
-**** quarkus-hibernate-orm-panache
-**** quarkus-jdbc-postgresql
-**** quarkus-elytron-security-properties-file
-**** quarkus-hibernate-validator
-** Angular
-* Pattern
+* Pattern L,F
 * Packages
 ** boundary
 ** dto
 ** entity
 ** filter
-* UI Design
-* Datenstruktur
+* UI Design F
+* Datenstruktur F
