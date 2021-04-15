@@ -25,6 +25,7 @@ rectangle PhotoLoco {
   Fotograf -- (Lokale Fotografie-Zeiten herausfinden)
   Fotograf -- (Beitrag verfassen)
   Model -- (Beitrag verfassen)
+  Model -- (Photoshooting planen)
+  Model -- (Location finden)
 }
 @enduml
-
