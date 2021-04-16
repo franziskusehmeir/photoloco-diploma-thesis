@@ -1,0 +1,64 @@
+@startuml
+hide circle
+hide empty methods
+skinparam backgroundColor transparent
+
+photoshooting "*" -- "1" location
+photoshootingInvite "1" -- "1" user
+photoshootingInvite "1" -- "1" photoshooting
+post "*" -- "1" user
+post "1" -- "*" postComment
+'comment -- user
+postComment "1" -- "*" postCommentRating
+postComment "*" -- "1" user
+postComment "1" -- "*" postComment
+photoshooting "*" -- "*" user
+
+
+user : username
+user : firstName
+user : lastName
+user : email
+user : imageUrl
+user : city
+user : country
+user : isModel
+user : isPhotographer
+user : biography
+user : instagramName
+user : websiteUrl
+user : password
+
+postCommentRating : isPositive
+postCommentRating : postComment
+
+postComment : content
+postComment : author
+postComment : postRepliedTo
+postComment : post
+postComment : replies
+postComment : ratings
+
+post : title
+post : content
+post : dateofcreation
+post : author
+post : comments
+
+photoshootingInvite : sender
+photoshootingInvite : receiver
+photoshootingInvite : photoshooting
+
+photoshooting : title
+photoshooting : dateOfPhotoshooting
+photoshooting : userInvolved
+photoshooting : location
+
+location : name
+location : longitude
+location : latitude
+location : description
+location : tag
+location : imgUrl
+location : photoshootings
+@enduml
