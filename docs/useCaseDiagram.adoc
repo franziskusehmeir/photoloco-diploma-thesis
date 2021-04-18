@@ -18,14 +18,14 @@ skinparam packageStyle rectangle
 actor Fotograf
 actor Model
 rectangle PhotoLoco {
-  Fotograf -- (Photoshooting planen)
+  Fotograf -- (Fotoshooting planen)
   Fotograf -- (Location finden)
   Fotograf -- (Model finden)
   Model -- (Fotograf finden)
   Fotograf -- (Lokale Fotografie-Zeiten herausfinden)
   Fotograf -- (Beitrag verfassen)
   Model -- (Beitrag verfassen)
-  Model -- (Photoshooting planen)
+  Model -- (Fotoshooting planen)
   Model -- (Location finden)
 }
 @enduml
