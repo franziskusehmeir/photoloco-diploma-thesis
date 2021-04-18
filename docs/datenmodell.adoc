@@ -13,6 +13,7 @@ postComment "1" -- "*" postCommentRating
 postComment "*" -- "1" user
 postComment "1" -- "*" postComment
 photoshooting "*" -- "*" user
+userRating "1" -- "*" user
 
 
 user : username
@@ -61,4 +62,8 @@ location : description
 location : tag
 location : imgUrl
 location : photoshootings
+
+userRating : ratedUser
+userRating : ratingUser
+userRating : rating
 @enduml
